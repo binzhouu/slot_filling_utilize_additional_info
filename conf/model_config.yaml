@@ -1,0 +1,22 @@
+require_improvement: 10
+batch_size: 64
+
+lr: 0.0003
+lr_decay: 0.05
+l2: 0.00000001
+momentum: 0
+epoch: 1000
+dropout: 0.5
+random_embedding: True
+
+char_emb_dim: 300
+word_emb_dim: 300
+
+data_config_file: conf/data_config.yaml
+char_emb_file: embedding/glove_ch_vec.pkl
+
+# model_num对应不同的模型结构
+model_num: 0
+model:
+  0: {encoder_type: "cnn_attn_lstm_crf", cnn_hidden_dim: 200, lstm_hidden_dim: 200, num_layers: 1, batch_first: True, bidirectional: True,
+      word_emb_dim: 300, intent_emb_dim: 100, lexi_emb_dim: 300, model_path: "saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf", alphabet_path: "saved_models/cnn_attn_lstm_crf/data"}

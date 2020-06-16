@@ -1,0 +1,12 @@
+mode: debug
+data:
+  train: data/Notebook/merged_corpus_0520.txt
+  debug: data/debug/test.txt
+
+specific_words_file: conf/specific_words.txt
+sampling_rate: 0.1
+
+char_max_length: 32
+word_max_length: 32
+
+no_replaced_lexicon_name: ['0000000', 'unk']
