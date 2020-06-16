@@ -60,6 +60,8 @@ class CnnAttnLstmCRF(nn.Module):
 		temperature = np.power(model_config['char_emb_dim'], 0.5)
 		self.attention = ScaledDotProductAttention(temperature)
 
+		self.gpu = model_config['gpu']
+
 	def forward(
 			self, batch_char, batch_word, batch_intent, batch_lexicon, batch_char_len, mask, batch_lexicon_indices,
 			batch_word_indices, batch_label=None):
@@ -88,6 +90,9 @@ class CnnAttnLstmCRF(nn.Module):
 		# 由于固定padding长度，这里不采用动态RNN策略
 		h0 = torch.zeros(self.num_layers*2, batch_char.size(0), self.hidden_size)
 		c0 = torch.zeros(self.num_layers*2, batch_char.size(0), self.hidden_size)
+		if self.gpu:
+			h0 = h0.cuda()
+			c0 = c0.cuda()
 		lstm_out, _ = self.lstm(attn_output, (h0, c0))
 
 		# fc
