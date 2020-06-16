@@ -1,0 +1,503 @@
+2020-06-11 14:29:32,995--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 14:31:20,066--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 14:32:16,712--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 14:34:23,624--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 14:35:41,778--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 280, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 20, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 14:35:54,092--__main__--INFO--Epoch : 0/1000
+2020-06-11 14:35:58,575--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 14:35:58,585--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 14:35:58,592--__main__--INFO--total_batch: 13
+2020-06-11 14:37:25,120--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 14:37:25,134--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 14:37:25,135--__main__--INFO--Epoch : 0/1000
+2020-06-11 14:37:25,135--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 14:37:25,136--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 14:37:25,136--__main__--INFO--total_batch: 13
+2020-06-11 14:51:36,940--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 14:51:36,964--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 14:51:36,965--__main__--INFO--Epoch : 0/1000
+2020-06-11 14:51:36,965--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 14:51:36,966--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 14:51:36,966--__main__--INFO--total_batch: 13
+2020-06-11 15:09:43,907--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 15:09:43,926--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 15:09:43,926--__main__--INFO--Epoch : 0/1000
+2020-06-11 15:09:43,927--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 15:09:43,928--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 15:09:43,928--__main__--INFO--total_batch: 13
+2020-06-11 15:28:49,966--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 15:28:55,964--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 15:29:25,913--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 15:29:25,918--__main__--INFO--Epoch : 0/1000
+2020-06-11 15:29:25,919--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 15:29:25,925--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 15:29:25,931--__main__--INFO--total_batch: 13
+2020-06-11 15:34:28,375--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 15:34:28,378--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 15:34:28,390--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 15:34:28,391--__main__--INFO--Epoch : 0/1000
+2020-06-11 15:34:28,391--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 15:34:28,392--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 15:34:28,392--__main__--INFO--total_batch: 13
+2020-06-11 15:42:16,307--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 15:42:16,313--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 15:42:16,326--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 15:42:16,327--__main__--INFO--Epoch : 0/1000
+2020-06-11 15:42:16,327--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 15:42:16,328--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 15:42:16,328--__main__--INFO--total_batch: 13
+2020-06-11 15:43:02,472--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 15:43:02,477--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 15:43:02,492--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 15:43:02,492--__main__--INFO--Epoch : 0/1000
+2020-06-11 15:43:02,492--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 15:43:02,493--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 15:43:02,494--__main__--INFO--total_batch: 13
+2020-06-11 15:45:28,391--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 15:45:28,394--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 15:45:28,406--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 15:45:28,406--__main__--INFO--Epoch : 0/1000
+2020-06-11 15:45:28,406--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 15:45:28,407--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 15:45:28,408--__main__--INFO--total_batch: 13
+2020-06-11 15:54:49,368--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 15:54:49,371--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 15:54:49,383--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 15:54:49,383--__main__--INFO--Epoch : 0/1000
+2020-06-11 15:54:49,383--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 15:54:49,384--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 15:54:49,384--__main__--INFO--total_batch: 13
+2020-06-11 16:42:46,341--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 16:42:46,348--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 16:42:46,362--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 16:42:46,363--__main__--INFO--Epoch : 0/1000
+2020-06-11 16:42:46,363--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 16:42:46,364--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 16:42:46,364--__main__--INFO--total_batch: 13
+2020-06-11 17:01:56,670--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 17:01:56,675--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 17:01:56,689--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 17:01:56,690--__main__--INFO--Epoch : 0/1000
+2020-06-11 17:01:56,690--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 17:01:56,691--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 17:01:56,691--__main__--INFO--total_batch: 13
+2020-06-11 17:30:06,110--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 17:30:06,113--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 17:30:06,127--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 17:30:06,127--__main__--INFO--Epoch : 0/1000
+2020-06-11 17:30:06,127--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 17:30:06,128--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 17:30:06,128--__main__--INFO--total_batch: 13
+2020-06-11 17:42:27,254--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 17:42:27,257--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 17:42:27,269--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 17:42:27,270--__main__--INFO--Epoch : 0/1000
+2020-06-11 17:42:27,270--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 17:42:27,271--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 17:42:27,271--__main__--INFO--total_batch: 13
+2020-06-11 17:57:03,282--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 17:57:03,288--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 17:57:03,308--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 17:57:03,309--__main__--INFO--Epoch : 0/1000
+2020-06-11 17:57:03,309--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 17:57:03,310--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 17:57:03,310--__main__--INFO--total_batch: 13
+2020-06-11 17:57:55,488--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 17:57:55,491--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 17:57:55,505--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 17:57:55,505--__main__--INFO--Epoch : 0/1000
+2020-06-11 17:57:55,505--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 17:57:55,506--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 17:57:55,507--__main__--INFO--total_batch: 13
+2020-06-11 17:59:07,191--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 17:59:07,194--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 17:59:07,206--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 17:59:07,206--__main__--INFO--Epoch : 0/1000
+2020-06-11 17:59:07,207--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 17:59:07,208--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 17:59:07,208--__main__--INFO--total_batch: 13
+2020-06-11 18:01:52,757--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 18:01:52,760--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 18:01:52,773--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 18:01:52,773--__main__--INFO--Epoch : 0/1000
+2020-06-11 18:01:52,773--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 18:01:52,774--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 18:01:52,775--__main__--INFO--total_batch: 13
+2020-06-11 20:28:35,336--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-11 20:28:35,342--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-11 20:28:35,358--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-11 20:28:35,359--__main__--INFO--Epoch : 0/1000
+2020-06-11 20:28:35,359--root--INFO--Learning rate is set as: 0.0003
+2020-06-11 20:28:35,360--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-11 20:28:35,360--__main__--INFO--total_batch: 13
+2020-06-12 10:23:56,801--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 10:23:56,808--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 10:23:56,854--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 10:23:56,855--__main__--INFO--Epoch : 0/1000
+2020-06-12 10:23:56,855--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 10:23:56,856--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 10:23:56,856--__main__--INFO--total_batch: 13
+2020-06-12 11:13:00,217--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 11:13:00,220--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 11:13:00,235--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 11:13:00,235--__main__--INFO--Epoch : 0/1000
+2020-06-12 11:13:00,235--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 11:13:00,237--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:13:00,237--__main__--INFO--total_batch: 13
+2020-06-12 11:14:47,587--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 11:14:47,590--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 11:14:47,602--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 11:14:47,602--__main__--INFO--Epoch : 0/1000
+2020-06-12 11:14:47,603--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 11:14:47,604--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:14:47,604--__main__--INFO--total_batch: 13
+2020-06-12 11:17:40,249--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 11:17:40,250--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 11:17:40,259--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 11:17:40,259--__main__--INFO--Epoch : 0/1000
+2020-06-12 11:17:40,259--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 11:17:40,260--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:17:40,260--__main__--INFO--total_batch: 13
+2020-06-12 11:17:42,919--__main__--INFO--Instance: 640; Time: 2.66s; loss: 21146.3591;
+2020-06-12 11:17:43,798--__main__--INFO--Epoch : 1/1000
+2020-06-12 11:17:43,798--root--INFO--Learning rate is set as: 0.0002857142857142857
+2020-06-12 11:17:43,798--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:17:43,799--__main__--INFO--total_batch: 13
+2020-06-12 11:17:46,367--__main__--INFO--Instance: 640; Time: 2.57s; loss: 18033.2341;
+2020-06-12 11:17:47,238--__main__--INFO--Epoch : 2/1000
+2020-06-12 11:17:47,238--root--INFO--Learning rate is set as: 0.0002727272727272727
+2020-06-12 11:17:47,238--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:17:47,238--__main__--INFO--total_batch: 13
+2020-06-12 11:17:49,751--__main__--INFO--Instance: 640; Time: 2.51s; loss: 12566.5132;
+2020-06-12 11:17:50,664--__main__--INFO--Epoch : 3/1000
+2020-06-12 11:17:50,664--root--INFO--Learning rate is set as: 0.0002608695652173913
+2020-06-12 11:17:50,664--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:17:50,664--__main__--INFO--total_batch: 13
+2020-06-12 11:17:53,246--__main__--INFO--Instance: 640; Time: 2.58s; loss: 8979.7373;
+2020-06-12 11:17:54,127--__main__--INFO--Epoch : 4/1000
+2020-06-12 11:17:54,127--root--INFO--Learning rate is set as: 0.00025
+2020-06-12 11:17:54,127--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:17:54,128--__main__--INFO--total_batch: 13
+2020-06-12 11:17:56,656--__main__--INFO--Instance: 640; Time: 2.53s; loss: 8771.6499;
+2020-06-12 11:17:57,522--__main__--INFO--Epoch : 5/1000
+2020-06-12 11:17:57,522--root--INFO--Learning rate is set as: 0.00023999999999999998
+2020-06-12 11:17:57,522--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:17:57,522--__main__--INFO--total_batch: 13
+2020-06-12 11:18:00,189--__main__--INFO--Instance: 640; Time: 2.67s; loss: 8578.8135;
+2020-06-12 11:18:01,156--__main__--INFO--Epoch : 6/1000
+2020-06-12 11:18:01,156--root--INFO--Learning rate is set as: 0.00023076923076923074
+2020-06-12 11:18:01,157--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:01,157--__main__--INFO--total_batch: 13
+2020-06-12 11:18:03,927--__main__--INFO--Instance: 640; Time: 2.77s; loss: 8483.8777;
+2020-06-12 11:18:04,832--__main__--INFO--Epoch : 7/1000
+2020-06-12 11:18:04,833--root--INFO--Learning rate is set as: 0.00022222222222222218
+2020-06-12 11:18:04,833--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:04,833--__main__--INFO--total_batch: 13
+2020-06-12 11:18:07,547--__main__--INFO--Instance: 640; Time: 2.71s; loss: 8387.6968;
+2020-06-12 11:18:08,533--__main__--INFO--Epoch : 8/1000
+2020-06-12 11:18:08,533--root--INFO--Learning rate is set as: 0.00021428571428571427
+2020-06-12 11:18:08,534--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:08,534--__main__--INFO--total_batch: 13
+2020-06-12 11:18:11,250--__main__--INFO--Instance: 640; Time: 2.72s; loss: 8250.2249;
+2020-06-12 11:18:12,174--__main__--INFO--Epoch : 9/1000
+2020-06-12 11:18:12,174--root--INFO--Learning rate is set as: 0.00020689655172413793
+2020-06-12 11:18:12,174--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:12,175--__main__--INFO--total_batch: 13
+2020-06-12 11:18:15,232--__main__--INFO--Instance: 640; Time: 3.06s; loss: 8030.0139;
+2020-06-12 11:18:16,168--__main__--INFO--Epoch : 10/1000
+2020-06-12 11:18:16,168--root--INFO--Learning rate is set as: 0.00019999999999999998
+2020-06-12 11:18:16,168--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:16,168--__main__--INFO--total_batch: 13
+2020-06-12 11:18:18,928--__main__--INFO--Instance: 640; Time: 2.76s; loss: 7639.0457;
+2020-06-12 11:18:19,977--__main__--INFO--Epoch : 11/1000
+2020-06-12 11:18:19,977--root--INFO--Learning rate is set as: 0.00019354838709677416
+2020-06-12 11:18:19,977--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:19,977--__main__--INFO--total_batch: 13
+2020-06-12 11:18:22,826--__main__--INFO--Instance: 640; Time: 2.85s; loss: 7142.1370;
+2020-06-12 11:18:23,871--__main__--INFO--Epoch : 12/1000
+2020-06-12 11:18:23,873--root--INFO--Learning rate is set as: 0.00018749999999999998
+2020-06-12 11:18:23,873--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:23,874--__main__--INFO--total_batch: 13
+2020-06-12 11:18:26,866--__main__--INFO--Instance: 640; Time: 3.00s; loss: 6667.0068;
+2020-06-12 11:18:27,874--__main__--INFO--Epoch : 13/1000
+2020-06-12 11:18:27,874--root--INFO--Learning rate is set as: 0.0001818181818181818
+2020-06-12 11:18:27,875--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:27,875--__main__--INFO--total_batch: 13
+2020-06-12 11:18:30,593--__main__--INFO--Instance: 640; Time: 2.72s; loss: 6255.0254;
+2020-06-12 11:18:31,587--__main__--INFO--Epoch : 14/1000
+2020-06-12 11:18:31,587--root--INFO--Learning rate is set as: 0.00017647058823529408
+2020-06-12 11:18:31,587--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:31,587--__main__--INFO--total_batch: 13
+2020-06-12 11:18:34,398--__main__--INFO--Instance: 640; Time: 2.81s; loss: 5956.0149;
+2020-06-12 11:18:35,316--__main__--INFO--Epoch : 15/1000
+2020-06-12 11:18:35,316--root--INFO--Learning rate is set as: 0.00017142857142857143
+2020-06-12 11:18:35,316--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:35,316--__main__--INFO--total_batch: 13
+2020-06-12 11:18:38,205--__main__--INFO--Instance: 640; Time: 2.89s; loss: 5728.5764;
+2020-06-12 11:18:39,096--__main__--INFO--Epoch : 16/1000
+2020-06-12 11:18:39,096--root--INFO--Learning rate is set as: 0.00016666666666666666
+2020-06-12 11:18:39,096--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:39,097--__main__--INFO--total_batch: 13
+2020-06-12 11:18:41,750--__main__--INFO--Instance: 640; Time: 2.65s; loss: 5538.2170;
+2020-06-12 11:18:42,716--__main__--INFO--Epoch : 17/1000
+2020-06-12 11:18:42,716--root--INFO--Learning rate is set as: 0.00016216216216216213
+2020-06-12 11:18:42,717--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:42,717--__main__--INFO--total_batch: 13
+2020-06-12 11:18:45,486--__main__--INFO--Instance: 640; Time: 2.77s; loss: 5365.4802;
+2020-06-12 11:18:46,366--__main__--INFO--Epoch : 18/1000
+2020-06-12 11:18:46,366--root--INFO--Learning rate is set as: 0.00015789473684210527
+2020-06-12 11:18:46,366--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:46,366--__main__--INFO--total_batch: 13
+2020-06-12 11:18:49,086--__main__--INFO--Instance: 640; Time: 2.72s; loss: 5184.8716;
+2020-06-12 11:18:50,105--__main__--INFO--Epoch : 19/1000
+2020-06-12 11:18:50,105--root--INFO--Learning rate is set as: 0.00015384615384615382
+2020-06-12 11:18:50,106--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:50,106--__main__--INFO--total_batch: 13
+2020-06-12 11:18:52,816--__main__--INFO--Instance: 640; Time: 2.71s; loss: 5048.0032;
+2020-06-12 11:18:53,700--__main__--INFO--Epoch : 20/1000
+2020-06-12 11:18:53,702--root--INFO--Learning rate is set as: 0.00015
+2020-06-12 11:18:53,703--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:53,703--__main__--INFO--total_batch: 13
+2020-06-12 11:18:56,291--__main__--INFO--Instance: 640; Time: 2.59s; loss: 4868.4834;
+2020-06-12 11:18:57,241--__main__--INFO--Epoch : 21/1000
+2020-06-12 11:18:57,241--root--INFO--Learning rate is set as: 0.00014634146341463414
+2020-06-12 11:18:57,241--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:18:57,241--__main__--INFO--total_batch: 13
+2020-06-12 11:19:00,276--__main__--INFO--Instance: 640; Time: 3.03s; loss: 4655.9426;
+2020-06-12 11:19:01,221--__main__--INFO--Epoch : 22/1000
+2020-06-12 11:19:01,221--root--INFO--Learning rate is set as: 0.00014285714285714284
+2020-06-12 11:19:01,221--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:19:01,221--__main__--INFO--total_batch: 13
+2020-06-12 11:19:03,992--__main__--INFO--Instance: 640; Time: 2.77s; loss: 4434.9661;
+2020-06-12 11:19:04,904--__main__--INFO--Epoch : 23/1000
+2020-06-12 11:19:04,904--root--INFO--Learning rate is set as: 0.0001395348837209302
+2020-06-12 11:19:04,904--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:19:04,904--__main__--INFO--total_batch: 13
+2020-06-12 11:19:07,607--__main__--INFO--Instance: 640; Time: 2.70s; loss: 4215.6357;
+2020-06-12 11:19:08,650--__main__--INFO--Epoch : 24/1000
+2020-06-12 11:19:08,651--root--INFO--Learning rate is set as: 0.00013636363636363634
+2020-06-12 11:19:08,651--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:19:08,651--__main__--INFO--total_batch: 13
+2020-06-12 11:19:11,272--__main__--INFO--Instance: 640; Time: 2.62s; loss: 3972.3862;
+2020-06-12 11:19:12,233--__main__--INFO--Epoch : 25/1000
+2020-06-12 11:19:12,233--root--INFO--Learning rate is set as: 0.0001333333333333333
+2020-06-12 11:19:12,233--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:19:12,233--__main__--INFO--total_batch: 13
+2020-06-12 11:19:14,846--__main__--INFO--Instance: 640; Time: 2.61s; loss: 3752.4292;
+2020-06-12 11:19:15,780--__main__--INFO--Epoch : 26/1000
+2020-06-12 11:19:15,780--root--INFO--Learning rate is set as: 0.00013043478260869564
+2020-06-12 11:19:15,780--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:19:15,780--__main__--INFO--total_batch: 13
+2020-06-12 11:19:18,531--__main__--INFO--Instance: 640; Time: 2.75s; loss: 3521.3208;
+2020-06-12 11:24:08,477--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 11:24:08,480--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 11:24:08,492--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 11:24:08,492--__main__--INFO--Epoch : 0/1000
+2020-06-12 11:24:08,492--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 11:24:08,492--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:08,493--__main__--INFO--total_batch: 13
+2020-06-12 11:24:11,148--__main__--INFO--Instance: 640; Time: 2.66s; loss: 20881.1223;
+2020-06-12 11:24:12,086--__main__--INFO--Epoch : 1/1000
+2020-06-12 11:24:12,086--root--INFO--Learning rate is set as: 0.0002857142857142857
+2020-06-12 11:24:12,086--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:12,087--__main__--INFO--total_batch: 13
+2020-06-12 11:24:14,663--__main__--INFO--Instance: 640; Time: 2.58s; loss: 17448.0284;
+2020-06-12 11:24:15,552--__main__--INFO--Epoch : 2/1000
+2020-06-12 11:24:15,552--root--INFO--Learning rate is set as: 0.0002727272727272727
+2020-06-12 11:24:15,552--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:15,553--__main__--INFO--total_batch: 13
+2020-06-12 11:24:18,057--__main__--INFO--Instance: 640; Time: 2.51s; loss: 11613.0763;
+2020-06-12 11:24:18,941--__main__--INFO--Epoch : 3/1000
+2020-06-12 11:24:18,943--root--INFO--Learning rate is set as: 0.0002608695652173913
+2020-06-12 11:24:18,943--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:18,943--__main__--INFO--total_batch: 13
+2020-06-12 11:24:21,459--__main__--INFO--Instance: 640; Time: 2.52s; loss: 9194.6881;
+2020-06-12 11:24:22,382--__main__--INFO--Epoch : 4/1000
+2020-06-12 11:24:22,382--root--INFO--Learning rate is set as: 0.00025
+2020-06-12 11:24:22,382--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:22,382--__main__--INFO--total_batch: 13
+2020-06-12 11:24:24,942--__main__--INFO--Instance: 640; Time: 2.56s; loss: 8791.9326;
+2020-06-12 11:24:25,826--__main__--INFO--Epoch : 5/1000
+2020-06-12 11:24:25,826--root--INFO--Learning rate is set as: 0.00023999999999999998
+2020-06-12 11:24:25,826--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:25,826--__main__--INFO--total_batch: 13
+2020-06-12 11:24:28,323--__main__--INFO--Instance: 640; Time: 2.50s; loss: 8611.3409;
+2020-06-12 11:24:29,216--__main__--INFO--Epoch : 6/1000
+2020-06-12 11:24:29,216--root--INFO--Learning rate is set as: 0.00023076923076923074
+2020-06-12 11:24:29,216--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:29,216--__main__--INFO--total_batch: 13
+2020-06-12 11:24:31,801--__main__--INFO--Instance: 640; Time: 2.58s; loss: 8478.3802;
+2020-06-12 11:24:32,679--__main__--INFO--Epoch : 7/1000
+2020-06-12 11:24:32,679--root--INFO--Learning rate is set as: 0.00022222222222222218
+2020-06-12 11:24:32,679--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:32,679--__main__--INFO--total_batch: 13
+2020-06-12 11:24:35,187--__main__--INFO--Instance: 640; Time: 2.51s; loss: 8367.6558;
+2020-06-12 11:24:36,092--__main__--INFO--Epoch : 8/1000
+2020-06-12 11:24:36,092--root--INFO--Learning rate is set as: 0.00021428571428571427
+2020-06-12 11:24:36,092--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:36,093--__main__--INFO--total_batch: 13
+2020-06-12 11:24:38,639--__main__--INFO--Instance: 640; Time: 2.55s; loss: 8185.3225;
+2020-06-12 11:24:39,533--__main__--INFO--Epoch : 9/1000
+2020-06-12 11:24:39,533--root--INFO--Learning rate is set as: 0.00020689655172413793
+2020-06-12 11:24:39,533--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:39,534--__main__--INFO--total_batch: 13
+2020-06-12 11:24:42,068--__main__--INFO--Instance: 640; Time: 2.53s; loss: 7896.8875;
+2020-06-12 11:24:42,938--__main__--INFO--Epoch : 10/1000
+2020-06-12 11:24:42,938--root--INFO--Learning rate is set as: 0.00019999999999999998
+2020-06-12 11:24:42,938--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:24:42,938--__main__--INFO--total_batch: 13
+2020-06-12 11:25:32,104--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 11:25:32,109--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 11:25:32,125--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 300, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 100, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 11:25:32,126--__main__--INFO--Epoch : 0/1000
+2020-06-12 11:25:32,126--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 11:25:32,127--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 11:25:32,127--__main__--INFO--total_batch: 13
+2020-06-12 11:27:02,085--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 11:27:02,088--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 14:42:12,837--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 14:42:12,843--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 14:43:10,066--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 14:43:10,072--__main__--INFO--Epoch : 0/1000
+2020-06-12 14:43:10,074--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 14:43:10,080--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 14:43:10,088--__main__--INFO--total_batch: 13
+2020-06-12 15:14:23,131--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 15:14:23,136--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 15:14:23,147--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 15:14:23,147--__main__--INFO--Epoch : 0/1000
+2020-06-12 15:14:23,148--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 15:14:23,149--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 15:14:23,149--__main__--INFO--total_batch: 13
+2020-06-12 15:38:50,806--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 15:38:50,810--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 15:38:50,823--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 15:38:50,823--__main__--INFO--Epoch : 0/1000
+2020-06-12 15:38:50,823--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 15:38:50,824--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 15:38:50,825--__main__--INFO--total_batch: 13
+2020-06-12 15:40:14,947--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 15:40:14,950--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 15:40:14,961--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 15:40:14,962--__main__--INFO--Epoch : 0/1000
+2020-06-12 15:40:14,962--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 15:40:14,963--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 15:40:14,963--__main__--INFO--total_batch: 13
+2020-06-12 16:22:43,341--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 16:22:43,344--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 16:22:43,356--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 16:22:43,356--__main__--INFO--Epoch : 0/1000
+2020-06-12 16:22:43,356--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 16:22:43,357--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 16:22:43,358--__main__--INFO--total_batch: 13
+2020-06-12 16:26:24,781--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 16:26:24,784--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 16:26:24,796--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 16:26:24,797--__main__--INFO--Epoch : 0/1000
+2020-06-12 16:26:24,797--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 16:26:24,798--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 16:26:24,798--__main__--INFO--total_batch: 13
+2020-06-12 16:35:21,037--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 16:35:21,042--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 16:35:21,056--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 16:35:21,056--__main__--INFO--Epoch : 0/1000
+2020-06-12 16:35:21,056--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 16:35:21,057--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 16:35:21,058--__main__--INFO--total_batch: 13
+2020-06-12 16:35:53,994--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 16:35:54,000--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 16:35:54,023--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 16:35:54,025--__main__--INFO--Epoch : 0/1000
+2020-06-12 16:35:54,025--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 16:35:54,027--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 16:35:54,028--__main__--INFO--total_batch: 13
+2020-06-12 16:50:10,618--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 16:50:10,621--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:03:54,842--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:03:54,846--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:05:53,510--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:05:53,516--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:12:41,222--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:12:41,227--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:12:41,245--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:12:41,246--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:12:41,246--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:12:41,249--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:12:41,249--__main__--INFO--total_batch: 13
+2020-06-12 17:16:21,023--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:16:21,026--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:16:21,037--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:16:21,037--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:16:21,038--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:16:21,038--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:16:21,039--__main__--INFO--total_batch: 13
+2020-06-12 17:17:03,058--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:17:03,061--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:17:03,072--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:17:03,073--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:17:03,073--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:17:03,074--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:17:03,074--__main__--INFO--total_batch: 13
+2020-06-12 17:24:47,341--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:24:47,344--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:24:47,358--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:24:47,358--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:24:47,359--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:24:47,360--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:24:47,360--__main__--INFO--total_batch: 13
+2020-06-12 17:29:43,204--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:29:43,207--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:29:43,219--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:29:43,219--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:29:43,219--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:29:43,220--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:29:43,221--__main__--INFO--total_batch: 13
+2020-06-12 17:30:25,117--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:30:25,121--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:30:25,131--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:30:25,132--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:30:25,132--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:30:25,133--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:30:25,134--__main__--INFO--total_batch: 13
+2020-06-12 17:32:15,317--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:32:15,320--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:32:15,332--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:32:15,332--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:32:15,333--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:32:15,333--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:32:15,334--__main__--INFO--total_batch: 13
+2020-06-12 17:33:49,591--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:33:49,594--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:33:49,605--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:33:49,606--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:33:49,606--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:33:49,607--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:33:49,607--__main__--INFO--total_batch: 13
+2020-06-12 17:34:55,629--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:34:55,633--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:34:55,643--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:34:55,644--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:34:55,644--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:34:55,645--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:34:55,645--__main__--INFO--total_batch: 13
+2020-06-12 17:37:55,988--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:37:55,996--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:37:56,012--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:37:56,012--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:37:56,013--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:37:56,016--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:37:56,017--__main__--INFO--total_batch: 13
+2020-06-12 17:44:56,246--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:44:56,249--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:44:56,260--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:44:56,260--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:44:56,261--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:44:56,262--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:44:56,262--__main__--INFO--total_batch: 13
+2020-06-12 17:48:08,268--utils.data--INFO--top 10 max length in chars: [30, 29, 29, 29, 29, 29, 29, 29, 29, 29]
+2020-06-12 17:48:08,271--utils.data--INFO--Top 10 shuffled indexes: [753, 172, 619, 359, 192, 302, 692, 79, 68, 520]
+2020-06-12 17:48:08,282--__main__--INFO--model config: {'require_improvement': 10, 'batch_size': 64, 'lr': 0.0003, 'lr_decay': 0.05, 'l2': 1e-08, 'momentum': 0, 'epoch': 1000, 'dropout': 0.5, 'random_embedding': True, 'char_emb_dim': 300, 'word_emb_dim': 300, 'data_config_file': 'conf/data_config.yaml', 'char_emb_file': 'embedding/glove_ch_vec.pkl', 'model_num': 0, 'device': device(type='cpu'), 'gpu': False, 'map_location': 'cpu', 'encoder_type': 'cnn_attn_lstm_crf', 'cnn_hidden_dim': 200, 'lstm_hidden_dim': 200, 'num_layers': 1, 'batch_first': True, 'bidirectional': True, 'intent_emb_dim': 100, 'lexi_emb_dim': 300, 'model_path': 'saved_models/cnn_attn_lstm_crf/cnn_attn_lstm_crf', 'alphabet_path': 'saved_models/cnn_attn_lstm_crf/data'}
+2020-06-12 17:48:08,282--__main__--INFO--Epoch : 0/1000
+2020-06-12 17:48:08,282--root--INFO--Learning rate is set as: 0.0003
+2020-06-12 17:48:08,283--__main__--INFO--first input word list: ['昨晚', '咱', '想', '要', '让', '服务员', '将', '床铺', '清洁', '下']
+2020-06-12 17:48:08,284--__main__--INFO--total_batch: 13
