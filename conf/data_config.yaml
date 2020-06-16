@@ -1,4 +1,4 @@
-mode: debug
+mode: train
 data:
   train: data/Notebook/merged_corpus_0520.txt
   debug: data/debug/test.txt
