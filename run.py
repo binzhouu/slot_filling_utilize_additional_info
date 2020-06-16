@@ -191,7 +191,7 @@ def parse_args():
 		type=str,
 		default=None,
 		choices=['train', 'validation'],
-		required=True,
+		required=False,
 		help='operating mode'
 	)
 	parser.add_argument(
@@ -212,11 +212,15 @@ if __name__ == '__main__':
 		log_file = os.path.join(ROOT_PATH, 'logs/run.log')
 		if os.path.exists(log_file):
 			os.remove(log_file)
+
+	logger = logging.getLogger(__name__)
+	logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
 	# train mode
 	if args.mode == 'train':
-		logger = logging.getLogger(__name__)
-		logging.config.fileConfig('logging.conf', disable_existing_loggers=False)
 		run = Run.read_configs(args.model_config_file)
 		run.train()
 	else:
+		# debug mode
+		# run = Run.read_configs(args.model_config_file)
+		# run.train()
 		pass

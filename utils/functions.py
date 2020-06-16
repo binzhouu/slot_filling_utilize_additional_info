@@ -167,7 +167,7 @@ def batch_char_sequence_labeling_process(
 		word_seq_tensor = word_seq_tensor.cuda()
 		intent_seq_tensor = intent_seq_tensor.cuda()
 		lexicon_seq_tensor = lexicon_seq_tensor.cuda()
-		label_seq_tensor = label_seq_tensor.cuda() if label_seq_tensor else None
+		label_seq_tensor = label_seq_tensor.cuda()
 		char_seq_lengths = char_seq_lengths.cuda()
 		word_seq_lengths = word_seq_lengths.cuda()
 		char_seq_recover = char_seq_recover.cuda()
