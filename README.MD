@@ -16,7 +16,7 @@
 
 ### 2.2 流程：
 
-![Process image](png/Process image.png)
+![Process image](png/Process_image.png)
 
 * 模型结构不是本Repo的重点，方案对了，模型的差异并不大。
 
