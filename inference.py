@@ -230,10 +230,10 @@ class SlotModel(object):
 
 if __name__ == '__main__':
 	texts = [
-		'开卧房UV杀菌功能',
+		'开启电扇的消毒电子产品模式', '开卧房UV杀菌功能',
 		'将客厅哈哈的色温调为100', '将客厅吊扇的色温调为100', '将客厅灯的色温调为100', '将客厅小黑的色温调为100', '将客厅小红的色温调为100']
 	intents = [
-		'open_function'
+		'open_function', 'open_function',
 		'set_attribute', 'set_attribute', 'set_attribute', 'set_attribute', 'set_attribute']
 	slot_model = SlotModel.read_configs(1)
 	for t, it in zip(texts, intents):
