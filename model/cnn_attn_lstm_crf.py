@@ -24,7 +24,8 @@ class CnnAttnLstmCRF(nn.Module):
 			self.char_drop = nn.Dropout(model_config['dropout'])
 		else:
 			char_emb_path = model_config['char_emb_file']
-			self.pretrain_char_embedding, self.char_emb_dim = build_pretrain_embedding(char_emb_path, self.data.char_alphabet)
+			self.pretrain_char_embedding, self.char_emb_dim = build_pretrain_embedding(char_emb_path, data.char_alphabet)
+			self.char_embeddings = nn.Embedding(data.char_alphabet_size, model_config['char_emb_dim'])
 			self.char_embeddings.weight.data.copy_(torch.from_numpy(self.pretrain_char_embedding))
 			self.char_drop = nn.Dropout(model_config['dropout'])
 
@@ -60,7 +61,7 @@ class CnnAttnLstmCRF(nn.Module):
 		temperature = np.power(model_config['char_emb_dim'], 0.5)
 		self.attention = ScaledDotProductAttention(temperature)
 
-		self.gpu = model_config['gpu']
+		self.device = model_config['device']
 
 	def forward(
 			self, batch_char, batch_word, batch_intent, batch_lexicon, batch_char_len, mask, batch_lexicon_indices,
@@ -73,7 +74,7 @@ class CnnAttnLstmCRF(nn.Module):
 		intent_embeds = self.intent_embeddings(batch_intent)
 		char_intent_embeds = torch.repeat_interleave(intent_embeds, batch_char.size(1), dim=1)
 		char_features = torch.cat([char_cnn_out, char_intent_embeds], 2)
-
+		# word
 		word_embeds = self.word_embeddings(batch_word)
 		lexi_embeds = self.lexi_embeddings(batch_lexicon)
 		batch_lexicon_indices, batch_word_indices = batch_lexicon_indices.unsqueeze(-1), batch_word_indices.unsqueeze(-1)
@@ -88,11 +89,8 @@ class CnnAttnLstmCRF(nn.Module):
 		attn_output, _ = self.attention(q, k, v, attn_mask)
 
 		# 由于固定padding长度，这里不采用动态RNN策略
-		h0 = torch.zeros(self.num_layers*2, batch_char.size(0), self.hidden_size)
-		c0 = torch.zeros(self.num_layers*2, batch_char.size(0), self.hidden_size)
-		if self.gpu:
-			h0 = h0.cuda()
-			c0 = c0.cuda()
+		h0 = torch.zeros(self.num_layers*2, batch_char.size(0), self.hidden_size).to(self.device)
+		c0 = torch.zeros(self.num_layers*2, batch_char.size(0), self.hidden_size).to(self.device)
 		lstm_out, _ = self.lstm(attn_output, (h0, c0))
 
 		# fc
@@ -114,23 +112,3 @@ class CnnAttnLstmCRF(nn.Module):
 		for index in range(vocab_size):
 			pretrain_emb[index, :] = np.random.uniform(-scale, scale, [1, embedding_dim])
 		return pretrain_emb
-
-	# 用lexicon_embedding替换word_embedding
-	def repalce_embedding(self, word_embeds, lexi_embeds, batch_lexicon):
-		new_word_embeddings = []
-		for word_emb, lexi_emb, one_lexi in zip(word_embeds, lexi_embeds, batch_lexicon):
-			word_emb_list = word_emb.tolist()
-			lexi_emb_list = lexi_emb.tolist()
-			one_lexi_list = one_lexi.tolist()
-			for idx, lexi_id in enumerate(one_lexi_list):
-				if lexi_id == 0:
-					break
-				elif lexi_id not in self.no_replaced_lexicon_id:
-					word_emb_list[idx] = lexi_emb_list[idx]
-			new_word_embeddings.append(word_emb_list)
-
-		return new_word_embeddings
-
-	# 计算需要替换的word位置的index
-	def gen_word_index(self, batch_lexi):
-		pass

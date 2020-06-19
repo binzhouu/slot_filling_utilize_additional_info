@@ -16,7 +16,7 @@ import argparse
 from constants import ROOT_PATH
 from utils.data import Data
 from utils.functions import batch_char_sequence_labeling_process, predict_check, evaluate_model
-from model.cnn_attn_lstm_crf import CnnAttnLstmCRF
+from model import BilstmCrf, CnnAttnLstmCRF
 
 
 class Run(object):
@@ -30,15 +30,14 @@ class Run(object):
 		alphabet_path = self.model_config['alphabet_path'] + '/' + self.encoder_type + '.dset'
 		data_config_file = self.model_config['data_config_file']
 		self.data = Data(data_config_file, alphabet_path)
-		# 不做替换的lexi_index
-		no_replaced_lexicon_name = self.data.data_config['no_replaced_lexicon_name']
-		self.no_replaced_lexicon_id = [self.data.lexicon_alphabet.get_index(i) for i in no_replaced_lexicon_name]
 
 	def train(self):
 		if self.encoder_type == 'cnn_attn_lstm_crf':
 			model = CnnAttnLstmCRF(self.data, self.model_config)
+		elif self.encoder_type == 'bilstm_crf':
+			model = BilstmCrf(self.data, self.model_config)
 		else:
-			print('No model selects')
+			print('No model select')
 			return
 		logger.info('model config: %s' % self.model_config)
 		optimizer = optim.Adam(model.parameters(), lr=self.model_config['lr'], weight_decay=self.model_config['l2'])
@@ -77,16 +76,12 @@ class Run(object):
 				instance = self.data.train_ids[start: end]
 				if not instance:
 					continue
-				if self.encoder_type == 'cnn_attn_lstm_crf':
-					batch_char, batch_word, batch_intent, batch_lexicon, batch_label, batch_char_len, mask, batch_lexicon_indices, \
-						batch_word_indices = batch_char_sequence_labeling_process(
-							instance, self.model_config['gpu'], self.data.char_max_length, self.data.word_max_length,
-							self.no_replaced_lexicon_id, True)
-					loss, tag_seq = model(
-						batch_char, batch_word, batch_intent, batch_lexicon, batch_char_len, mask, batch_lexicon_indices,
-						batch_word_indices, batch_label)
+				if self.encoder_type == 'bilstm_crf':
+					batch_char, batch_intent, batch_char_len, mask, batch_char_recover, batch_label = \
+						batch_char_sequence_labeling_process(instance, self.model_config['gpu'], self.data.char_max_length, True)
+					loss, tag_seq = model(batch_char, batch_intent, batch_char_len, mask, batch_label)
 				else:
-					print('No model selects')
+					print('return')
 					return
 
 				right, whole = predict_check(tag_seq, batch_label, mask)
@@ -120,8 +115,6 @@ class Run(object):
 
 			# evaluation:
 			self.model_config['char_max_length'] = self.data.char_max_length
-			self.model_config['word_max_length'] = self.data.word_max_length
-			self.model_config['no_replaced_lexicon_id'] = self.no_replaced_lexicon_id
 			dev_loss, acc, p, r, f, _, _ = evaluate_model(
 				self.data, model, "dev", self.model_config, self.data.label_alphabet, self.encoder_type)
 			dev_finish = time.time()
@@ -221,6 +214,6 @@ if __name__ == '__main__':
 		run.train()
 	else:
 		# debug mode
-		# run = Run.read_configs(args.model_config_file)
-		# run.train()
+		run = Run.read_configs(args.model_config_file)
+		run.train()
 		pass

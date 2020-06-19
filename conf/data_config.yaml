@@ -1,12 +1,13 @@
 mode: train
 data:
-  train: data/Notebook/merged_corpus_0520.txt
+  train: data/Notebook/merged_corpus_0618.txt
   debug: data/debug/test.txt
+  output: data/Notebook/output/output_corpus.txt
 
 specific_words_file: conf/specific_words.txt
 sampling_rate: 0.1
 
-char_max_length: 32
-word_max_length: 32
+char_max_length: 64
+# word_max_length: 32
 
-no_replaced_lexicon_name: ['0000000', 'unk']
+# no_replaced_lexicon_name: ['0000000', 'unk']

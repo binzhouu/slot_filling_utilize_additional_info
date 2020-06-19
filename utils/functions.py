@@ -25,34 +25,20 @@ def normalize_word(word):
 	return new_word
 
 
-def batch_char_sequence_labeling_process(
-		input_batch_list: list, gpu: bool, char_max_length: int, word_max_length: int, no_replaced_id: list,
-		if_train: bool
-) -> tuple:
+def batch_char_sequence_labeling_process(input_batch_list: list, gpu: bool, char_max_length: int, if_train: bool) \
+		-> tuple:
 	"""
 
-	:param input_batch_list: [[char],[word],[intent],[lexicon],[label]]
+	:param input_batch_list: [[char],[intent],[label]]
 	:param gpu:
 	:param char_max_length: max length of char sequence
-	:param word_max_length: max length of word sequence
-	:param no_replaced_id: no_replaced_lexicon_id
 	:param if_train: train process or inference process
 	:return:
 	"""
 	batch_size = len(input_batch_list)
 	# char和word级别的特征，按照max_length的长度做截断
 	chars = [sent[0][:char_max_length] for sent in input_batch_list]
-	words = [sent[1][:word_max_length] for sent in input_batch_list]
-	intents = [sent[2] for sent in input_batch_list]
-	lexicons = [sent[3][:word_max_length] for sent in input_batch_list]
-	# 计算replaced index
-	lexicon_indices = copy.deepcopy(lexicons)
-	for lexicon in lexicon_indices:
-		for n in range(len(lexicon)):
-			if lexicon[n] in no_replaced_id:
-				lexicon[n] = 0
-			else:
-				lexicon[n] = 1
+	intents = [sent[1] for sent in input_batch_list]
 
 	# train use
 	if if_train:
@@ -80,38 +66,13 @@ def batch_char_sequence_labeling_process(
 		label_seq_tensor = label_seq_tensor[char_perm_idx]
 		mask = mask[char_perm_idx]
 
-		# 词
-		word_seq_lengths = torch.tensor(list(map(len, words)), dtype=torch.long)
-		word_seq_tensor = torch.zeros((batch_size, word_max_length), requires_grad=if_train).long()
-		lexicon_seq_tensor = torch.zeros((batch_size, word_max_length), requires_grad=if_train).long()
-		# lexicon index
-		# padding的位置需要置为0（模型部分要做乘法）
-		lexicon_indices_seq_tensor = torch.zeros((batch_size, word_max_length), requires_grad=False).float()
-		# word index
-		# padding的位置需要置为1
-		word_indices_seq_tensor = torch.ones((batch_size, word_max_length), requires_grad=False).float()
-
-		# assignment
-		for idx, (seq, lexi, lexi_index, seq_len) in enumerate(zip(words, lexicons, lexicon_indices, word_seq_lengths)):
-			length = seq_len.item()
-			word_seq_tensor[idx, :length] = torch.tensor(seq, dtype=torch.long)
-			lexicon_seq_tensor[idx, :length] = torch.tensor(lexi, dtype=torch.long)
-			lexicon_indices_seq_tensor[idx, :length] = torch.tensor(lexi_index, dtype=torch.long)
-			word_indices_seq_tensor[idx, :length] = \
-				torch.tensor(1, dtype=torch.long) - torch.tensor(lexi_index, dtype=torch.long)
-
-		# rank
-		word_seq_tensor = word_seq_tensor[char_perm_idx]
-		lexicon_seq_tensor = lexicon_seq_tensor[char_perm_idx]
-		word_seq_lengths = word_seq_lengths[char_perm_idx]
-		lexicon_indices_seq_tensor = lexicon_indices_seq_tensor[char_perm_idx]
-		word_indices_seq_tensor = word_indices_seq_tensor[char_perm_idx]
-
-	# inference use
-	else:
+		# recover:
+		_, char_seq_recover = char_perm_idx.sort(0, descending=False)
+	else:  # inference use
+		# 字符
 		char_seq_lengths = torch.tensor(list(map(len, chars)), dtype=torch.long)
 		char_seq_tensor = torch.zeros((batch_size, char_max_length), requires_grad=if_train).long()
-		mask = torch.zeros((batch_size, char_max_length), requires_grad=if_train).long().byte()
+		mask = torch.zeros((batch_size, char_max_length), requires_grad=if_train).byte()
 
 		# padding
 		for idx, (seq, seq_len) in enumerate(zip(chars, char_seq_lengths)):
@@ -122,62 +83,19 @@ def batch_char_sequence_labeling_process(
 		# intent
 		intent_seq_tensor = torch.tensor(intents).reshape(batch_size, -1)
 
-		# rank
-		char_seq_lengths, char_perm_idx = char_seq_lengths.sort(0, descending=True)
-		char_seq_tensor = char_seq_tensor[char_perm_idx]
-		intent_seq_tensor = intent_seq_tensor[char_perm_idx]
-		mask = mask[char_perm_idx]
-
-		# 词
-		word_seq_lengths = torch.tensor(list(map(len, words)), dtype=torch.long)
-		word_seq_tensor = torch.zeros((batch_size, word_max_length), requires_grad=if_train).long()
-		lexicon_seq_tensor = torch.zeros((batch_size, word_max_length), requires_grad=if_train).long()
-		# lexicon index
-		# padding的位置需要置为0（forward部分要做乘法）
-		lexicon_indices_seq_tensor = torch.zeros((batch_size, word_max_length), requires_grad=False).float()
-		# word index
-		# padding的位置需要置为1
-		word_indices_seq_tensor = torch.ones((batch_size, word_max_length), requires_grad=False).float()
-
-		# assignment
-		for idx, (seq, lexi, lexi_index, seq_len) in enumerate(zip(words, lexicons, lexicon_indices, word_seq_lengths)):
-			length = seq_len.item()
-			word_seq_tensor[idx, :length] = torch.tensor(seq, dtype=torch.long)
-			lexicon_seq_tensor[idx, :length] = torch.tensor(lexi, dtype=torch.long)
-			lexicon_indices_seq_tensor[idx:, length] = torch.tensor(lexi_index, dtype=torch.long)
-			word_indices_seq_tensor[idx: length] = \
-				torch.tensor(1, dtype=torch.long) - torch.tensor(lexi_index, dtype=torch.long)
-
-		# rank
-		word_seq_tensor = word_seq_tensor[char_perm_idx]
-		lexicon_seq_tensor = lexicon_seq_tensor[char_perm_idx]
-		word_seq_lengths = word_seq_lengths[char_perm_idx]
-		lexicon_indices_seq_tensor = lexicon_indices_seq_tensor[char_perm_idx]
-		word_indices_seq_tensor = word_indices_seq_tensor[char_perm_idx]
-
-		#
-		label_seq_tensor = None
-
-	# recover:
-	_, char_seq_recover = char_perm_idx.sort(0, descending=False)
-	_, word_seq_recover = char_perm_idx.sort(0, descending=False)
+		# faker
+		char_seq_recover = torch.tensor(0)
+		label_seq_tensor = torch.tensor(0)
 
 	if gpu:
 		char_seq_tensor = char_seq_tensor.cuda()
-		word_seq_tensor = word_seq_tensor.cuda()
 		intent_seq_tensor = intent_seq_tensor.cuda()
-		lexicon_seq_tensor = lexicon_seq_tensor.cuda()
 		label_seq_tensor = label_seq_tensor.cuda()
 		char_seq_lengths = char_seq_lengths.cuda()
-		word_seq_lengths = word_seq_lengths.cuda()
 		char_seq_recover = char_seq_recover.cuda()
-		word_seq_recover = word_seq_recover.cuda()
 		mask = mask.cuda()
-		lexicon_indices_seq_tensor = lexicon_indices_seq_tensor.cuda()
-		word_indices_seq_tensor = word_indices_seq_tensor.cuda()
 
-	return char_seq_tensor, word_seq_tensor, intent_seq_tensor, lexicon_seq_tensor, label_seq_tensor, char_seq_lengths, \
-		mask, lexicon_indices_seq_tensor, word_indices_seq_tensor
+	return char_seq_tensor, intent_seq_tensor, char_seq_lengths, mask, char_seq_recover, label_seq_tensor
 
 
 def build_pretrain_embedding(embedding_path, word_alphabet, norm=True):
@@ -273,15 +191,11 @@ def evaluate_model(data, model, name, config, alphabet, encoder_type):
 		instance = instances[start:end]
 		if not instance:
 			continue
-		if encoder_type == 'cnn_attn_lstm_crf':
-			batch_char, batch_word, batch_intent, batch_lexicon, batch_label, batch_char_len, mask, batch_lexicon_indices, \
-				batch_word_indices = batch_char_sequence_labeling_process(
-					instance, config['gpu'], config['char_max_length'], config['word_max_length'],
-					config['no_replaced_lexicon_id'], True)
+		if encoder_type == 'bilstm_crf':
+			batch_char, batch_intent, batch_char_len, mask, batch_char_recover, batch_label = \
+				batch_char_sequence_labeling_process(instance, config['gpu'], config['char_max_length'], True)
 			with torch.no_grad():  # 防止在验证阶段造成梯度累计
-				loss, tag_seq = model(
-					batch_char, batch_word, batch_intent, batch_lexicon, batch_char_len, mask, batch_lexicon_indices,
-					batch_word_indices, batch_label)
+				loss, tag_seq = model(batch_char, batch_intent, batch_char_len, mask, batch_label)
 				loss = loss.item()
 		else:
 			raise ValueError('No Model')
