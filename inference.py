@@ -57,45 +57,52 @@ class SlotModel(object):
 			intent = 'None'
 		instance, instance_ids = [], []
 		# 处理当前会话
-		char_id_list, word_id_list, intent_id_list, lexicon_id_list, label_id_list = [], [], [], [], []
+		new_char, seq_char, seq_char_id_list, seq_label, seq_label_id_list = [], [], [], [], []
 		char, seg_list = list(text), self.seg.cut(text)
 		# 存储one-hot形式的属性特征
 		lexicons = []
 		# word level
-		# for word in seg_list:
-		# 	word_id = self.data.word_alphabet.get_index(normalize_word(word))
-		# 	word_id_list.append(word_id)
-		#
-		# 	lexi_feat = []
-		# 	for lexi_type, lb in self.data.trees.lexi_trees.items():
-		# 		lexi_feat.append(lb.search(word))
-		# 	for n in range(len(lexi_feat)):
-		# 		if lexi_feat[n] is None or lexi_feat[n] == '_STEM_':
-		# 			lexi_feat[n] = 0
-		# 		else:
-		# 			lexi_feat[n] = 1
-		# 	lexi_feat = ''.join([str(i) for i in lexi_feat])
-		# 	lexicons.append(lexi_feat)
-		# 	lexicon_id_list.append(self.data.lexicon_alphabet.get_index(lexi_feat))
-		# # char level
-		# for c in char:
-		# 	char_id_list.append(self.data.char_alphabet.get_index(normalize_word(c)))
-		# # intent
-		# intent_id_list.append(self.data.intent_alphabet.get_index(intent))
-		#
-		# # char, word, intent, lexicon_feat
-		# instance.append([char, seg_list, [intent], lexicons])
-		# instance_ids.append([char_id_list, word_id_list, intent_id_list, lexicon_id_list])
-		#
-		# # instance process
-		# batch_char, batch_word, batch_intent, batch_lexicon, _, batch_char_len, mask, batch_lexicon_indices, \
-		# 	batch_word_indices = batch_char_sequence_labeling_process(
-		# 		instance_ids, self.gpu, self.char_max_length, self.word_max_length, self.no_replaced_lexicon_id, False)
-		# tag_seq = self.model(
-		# 	batch_char, batch_word, batch_intent, batch_lexicon, batch_char_len, mask, batch_lexicon_indices, batch_word_indices)
+		# 记录字符的index
+		word_indices = []
+		start = 0
+		for word in seg_list:
+			end = start + len(word)
+			lexi_feat = []
+			for lexi_type, lb in self.data.trees.lexi_trees.items():
+				lexi_feat.append(lb.search(word))
+			for n in range(len(lexi_feat)):
+				if lexi_feat[n] is None or lexi_feat[n] == '_STEM_':
+					lexi_feat[n] = 0
+				else:
+					lexi_feat[n] = 1
+			lexi_feat = ''.join([str(i) for i in lexi_feat])
+			lexicons.append(lexi_feat)
+			word_indices.append([start, end])
+
+			# char
+			# '0010000'
+			if '1' in lexi_feat:
+				seq_char.append(lexi_feat)
+				seq_char_id_list.append(self.data.char_alphabet.get_index(lexi_feat))
+				new_char.append(''.join(char[start: end]))
+			else:  # '0000000'
+				for c in word:
+					seq_char.append(c)
+					seq_char_id_list.append(self.data.char_alphabet.get_index(normalize_word(c)))
+					new_char.append(c)
+			start = end
+		# intent
+		intent_id = self.data.intent_alphabet.get_index(intent)
+		instance.append([seq_char, [intent]])
+		instance_ids.append([seq_char_id_list, [intent_id]])
+		# instance process
+		batch_char, batch_intent, batch_char_len, mask, batch_char_recover, _ = \
+			batch_char_sequence_labeling_process(instance_ids, self.gpu, self.char_max_length, False)
+		tag_seq = self.model(batch_char, batch_intent, batch_char_len, mask)
+		# label recover
 		pred_result = self.predict_recover_label(tag_seq, mask, self.data.label_alphabet)
-		pred_result = list(np.array(pred_result).reshape(len(char), ))
-		result = self.slot_concat(char, pred_result)
+		pred_result = list(np.array(pred_result).reshape(len(seq_char), ))
+		result = self.slot_concat(new_char, pred_result)
 
 		return result
 
@@ -121,11 +128,7 @@ class SlotModel(object):
 		with open(data_config_file, 'r') as rf:
 			data_config = yaml.load(rf, Loader=yaml.FullLoader)
 		configs.update({
-			'char_max_length': data_config['char_max_length'],
-			'word_max_length': data_config['word_max_length'],
-			'no_replaced_lexicon_name': data_config['no_replaced_lexicon_name'],
-			'specific_words_file': data_config['specific_words_file']
-		})
+			'char_max_length': data_config['char_max_length'], 'specific_words_file': data_config['specific_words_file']})
 		# inference_config
 		with open(inference_config_file, 'r') as rf:
 			inference_config = yaml.load(rf, Loader=yaml.FullLoader)
@@ -226,9 +229,13 @@ class SlotModel(object):
 
 
 if __name__ == '__main__':
-	texts = ['将客厅电扇的色温调为100', '将客厅吊扇的色温调为100', '将客厅灯的色温调为100', '将客厅小黑的色温调为100', '将客厅小红的色温调为100']
-	intents = ['set_attribute', 'set_attribute', 'set_attribute', 'set_attribute', 'set_attribute']
-	slot_model = SlotModel.read_configs(0)
+	texts = [
+		'开卧房UV杀菌功能',
+		'将客厅哈哈的色温调为100', '将客厅吊扇的色温调为100', '将客厅灯的色温调为100', '将客厅小黑的色温调为100', '将客厅小红的色温调为100']
+	intents = [
+		'open_function'
+		'set_attribute', 'set_attribute', 'set_attribute', 'set_attribute', 'set_attribute']
+	slot_model = SlotModel.read_configs(1)
 	for t, it in zip(texts, intents):
 		start_time = datetime.now()
 		res = slot_model.inference(t, it, False, None)

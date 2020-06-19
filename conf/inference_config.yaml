@@ -1,3 +1,3 @@
-model_name: cnn_attn_lstm_crf-84.model
-alphabet_name: cnn_attn_lstm_crf.dset
+model_name: bilstm_crf-1.model
+alphabet_name: bilstm_crf.dset
 user_dict: lexicon/user_dict.txt

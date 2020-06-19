@@ -149,7 +149,7 @@ class Data(object):
 					else:
 						for c in word:
 							seq_char.append(c)
-							seq_char_id_list.append(self.char_alphabet.get_index(c))
+							seq_char_id_list.append(self.char_alphabet.get_index(normalize_word(c)))
 						seq_label += char_label[start: end]
 						seq_label_id_list += [self.label_alphabet.get_index(cl) for cl in char_label[start: end]]
 
@@ -160,7 +160,7 @@ class Data(object):
 			intent_id_list.append(self.intent_alphabet.get_index(intent))
 
 			if idx % 10000 == 0:
-				print('read instance : %s' % idx)
+				logger.info('read instance : %s' % idx)
 
 			if flag is True:
 				# text, char, intent, sequence_label
