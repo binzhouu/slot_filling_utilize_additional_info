@@ -28,7 +28,8 @@ class Trees(object):
 					continue
 				else:
 					word_dict[value].append(token)
-		for lexi_type, tokens in word_dict.items():
+		# word_dict需要预先排序，保证推理时获得的特征顺序一致
+		for lexi_type, tokens in sorted(word_dict.items(), key=lambda x:x[0], reverse=False):
 			lb = LexiconBuilder(tokens, lexi_type)
 			lexi_trees[lexi_type] = lb
 		return cls(word_dict, lexi_trees)
