@@ -22,7 +22,14 @@
 
 
 
-### 2.3 举例：
+### 2.3 效果演示：
+
+#### 2.3.1 泛化能力
+
+![generalization](/Users/zhoubin/GitProjects/slot_filling_utilize_additional_info/png/generalization.png)
 
 
 
+#### 2.3.2 同义词识别能力
+
+![sysnonyms](/Users/zhoubin/GitProjects/slot_filling_utilize_additional_info/png/sysnonyms.png)
