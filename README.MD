@@ -26,10 +26,10 @@
 
 #### 2.3.1 泛化能力
 
-![generalization](/Users/zhoubin/GitProjects/slot_filling_utilize_additional_info/png/generalization.png)
+![generalization](png/generalization.png)
 
 
 
 #### 2.3.2 同义词识别能力
 
-![sysnonyms](/Users/zhoubin/GitProjects/slot_filling_utilize_additional_info/png/sysnonyms.png)
+![sysnonyms](png/sysnonyms.png)
