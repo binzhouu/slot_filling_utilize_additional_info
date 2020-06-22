@@ -111,6 +111,8 @@ class SlotModel(object):
 		"""
 
 		:param model_num: specify a certain model
+		0: cnn_attn_lstm_crf
+		1: bilstm_crf
 		:return:
 		"""
 		with open(model_config_file, 'r') as rf:
