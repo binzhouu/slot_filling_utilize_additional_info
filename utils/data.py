@@ -135,7 +135,7 @@ class Data(object):
 						tmp_label = [swl.split('-')[-1] for swl in specific_word_label]
 						if len(set(tmp_label)) > 1:
 							# 判断是否过滤该条数据
-							# print('Be filtered: %s' % line['text'], word, tmp_label)
+							print('Be filtered: %s' % line['text'], word, tmp_label)
 							flag = False
 						else:
 							assert len(set(tmp_label)) == 1
