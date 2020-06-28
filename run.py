@@ -214,6 +214,6 @@ if __name__ == '__main__':
 		run.train()
 	else:
 		# debug mode
-		run = Run.read_configs(args.model_config_file)
-		run.train()
+		# run = Run.read_configs(args.model_config_file)
+		# run.train()
 		pass
