@@ -1,6 +1,6 @@
 mode: train
 data:
-  train: data/Notebook/merged_corpus_0623.txt
+  train: data/Notebook/merged_corpus_0624.txt
   debug: data/debug/test.txt
   output: data/Notebook/output/replaced_corpus.txt
 
