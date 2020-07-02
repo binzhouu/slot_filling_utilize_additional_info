@@ -10,13 +10,16 @@ import pickle
 import torch
 import numpy as np
 import re
-from pkuseg import pkuseg
+import json
 import yaml
+import grpc
 from constants import ROOT_PATH
 from utils.data import Data
 from utils.trees import Trees
 from model import BilstmCrf
 from utils.functions import normalize_word, batch_char_sequence_labeling_process
+from protos.nlp_basic_pb2 import Request
+from protos import nlp_basic_pb2_grpc
 
 model_config_file = os.path.join(ROOT_PATH, 'conf/model_config.yaml')
 inference_config_file = os.path.join(ROOT_PATH, 'conf/inference_config.yaml')
@@ -24,12 +27,16 @@ data_config_file = os.path.join(ROOT_PATH, 'conf/data_config.yaml')
 
 
 class SlotModel(object):
-	def __init__(self, configs):
-		self.configs = configs
+	def __init__(self, ip_port):
+		"""
+
+		:param ip_port: ai-nlp-basic ip:port
+		"""
+		configs = self.read_configs(1)
 		dset_path, model_path = configs['alphabet_path'], configs['model_path']
 		self.data = Data('', '', False)
 		# 推理阶段需要构建ac tree
-		self.data.trees = Trees.build_trees(self.configs['specific_words_file'])
+		self.data.trees = Trees.build_trees(configs['specific_words_file'])
 		with open(dset_path, 'rb') as rbf:
 			self.data.char_alphabet.instance2index = pickle.load(rbf)  # keep_growing: False
 			self.data.intent_alphabet.instance2index = pickle.load(rbf)
@@ -47,9 +54,19 @@ class SlotModel(object):
 		self.gpu = configs['gpu']
 		self.char_max_length = configs['char_max_length']
 
-		self.seg = pkuseg(user_dict=configs['user_dict'])
+		self.channel = grpc.insecure_channel(ip_port)
+		self.stub = nlp_basic_pb2_grpc.NLPBasicServerStub(self.channel)
 
-	def inference(self, text, intent, session_keep, previous_intent):
+	def inference(self, text, intent, session_keep, previous_intent, trace_id=''):
+		"""
+
+		:param text:
+		:param intent: 当前意图
+		:param session_keep:
+		:param previous_intent: 上一轮意图
+		:param trace_id:
+		:return:
+		"""
 		# 如果存在多轮对话，且当前intent为空，取上一轮text的意图
 		if session_keep and intent is None:
 			intent = previous_intent
@@ -58,7 +75,7 @@ class SlotModel(object):
 		instance, instance_ids = [], []
 		# 处理当前会话
 		new_char, seq_char, seq_char_id_list, seq_label, seq_label_id_list = [], [], [], [], []
-		char, seg_list = list(text), self.seg.cut(text)
+		char, seg_list = list(text), self.process(self.stub, text, trace_id)
 		# 存储one-hot形式的属性特征
 		lexicons = []
 		# word level
@@ -106,13 +123,34 @@ class SlotModel(object):
 
 		return result
 
-	@classmethod
-	def read_configs(cls, model_num: int):
+	@staticmethod
+	def process(stub, text, trace_id):
+		"""
+		grpc server tokenize
+		:param stub: grpc stub
+		:param text:
+		:param trace_id:
+		:return:
+		"""
+		type = 'tokenize'
+		request = Request(trace_id=trace_id, text=text, type=type)
+		response = stub.process(request)
+		result = response.result
+		pairs = json.loads(result)['tokens']
+		seg_list = [pair[0] for pair in pairs]
+
+		return seg_list
+
+	def close(self):
+		self.channel.close()
+
+	@staticmethod
+	def read_configs(model_num: int) -> dict:
 		"""
 
 		:param model_num: specify a certain model
-		0: cnn_attn_lstm_crf
-		1: bilstm_crf
+		0 means cnn_attn_lstm_crf
+		1 means bilstm_crf
 		:return:
 		"""
 		with open(model_config_file, 'r') as rf:
@@ -140,7 +178,7 @@ class SlotModel(object):
 		configs['alphabet_path'] = os.path.join(ROOT_PATH, configs['alphabet_path'], inference_config['alphabet_name'])
 		configs['user_dict'] = os.path.join(ROOT_PATH, inference_config['user_dict'])
 
-		return cls(configs)
+		return configs
 
 	@staticmethod
 	def predict_recover_label(pred_variable, mask_variable, label_alphabet):
@@ -237,7 +275,7 @@ if __name__ == '__main__':
 	intents = [
 		'open_function', 'open_function',
 		'set_attribute', 'set_attribute', 'set_attribute', 'set_attribute', 'set_attribute']
-	slot_model = SlotModel.read_configs(1)
+	slot_model = SlotModel('172.16.246.53:31644')
 	for t, it in zip(texts, intents):
 		start_time = datetime.now()
 		res = slot_model.inference(t, it, False, None)
