@@ -18,7 +18,7 @@
 
 #### 2.2.1 选型一：
 
-![Process image](png/Process image.png)
+![Process_image](png/Process_image.png)
 
 - 特征抽象：utils/data.py，对特殊属性的token在字符级别的替换。
 
@@ -26,7 +26,7 @@
 
 #### 2.2.2 选型二：
 
-![Process image](png/char_word_attn.png)
+![char_word_attn](png/char_word_attn.png)
 
 - 借鉴了transformer中，multi-head attention的思路。
 
