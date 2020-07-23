@@ -14,11 +14,25 @@
 
 
 
-### 2.2 流程：
+### 2.2 框架设计：
 
-![Process image](png/Process_image.png)
+#### 2.2.1 选型一：
 
-* 模型结构不是本Repo的重点，方案对了，模型的差异并不大。
+![Process image](png/Process image.png)
+
+- 特征抽象：utils/data.py，对特殊属性的token在字符级别的替换。
+
+
+
+#### 2.2.2 选型二：
+
+![Process image](png/char_word_attn.png)
+
+- 借鉴了transformer中，multi-head attention的思路。
+
+
+
+*模型结构不是本Repo的重点，方案对了，模型可以根据性能的要求选择，本Repo并没有选择预训练的动态语言模型，效果依然出色。*
 
 
 
@@ -33,3 +47,20 @@
 #### 2.3.2 同义词识别能力
 
 ![sysnonyms](png/sysnonyms.png)
+
+
+
+## 三、 How to use：
+
+### 3.1 train mode:
+
+```shell
+python3 run.py --mode=train
+```
+
+### 3.2 inference mode:
+
+```shell
+python3 inference.py
+```
+
