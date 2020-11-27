@@ -275,7 +275,7 @@ if __name__ == '__main__':
 	intents = [
 		'open_function', 'open_function',
 		'set_attribute', 'set_attribute', 'set_attribute', 'set_attribute', 'set_attribute']
-	slot_model = SlotModel('172.16.246.53:31644')
+	slot_model = SlotModel('overa.wgine-inc.top:5010')
 	for t, it in zip(texts, intents):
 		start_time = datetime.now()
 		res = slot_model.inference(t, it, False, None)
