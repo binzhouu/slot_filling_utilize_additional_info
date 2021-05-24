@@ -1,0 +1,14 @@
+data/Notebook
+test.py
+logs/*
+saved_models/cnn_attn_lstm_crf
+saved_models/bilstm_crf
+conf/specific_words.txt
+lexicon/user_dict.txt
+data/Notebook/badcase.txt
+data/Notebook/output/output_corpus.txt
+back_test.py
+data/Notebook/corpus_badcase.txt
+.DS_Store
+.idea/
+__pycache__
